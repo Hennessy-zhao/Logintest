@@ -1,0 +1,10 @@
+<div id="pictures_new">
+	<p class="p1">>>Create new picture album</p>
+	<%= form_tag("/pictures/new", method: "post", :multipart => true) do %>
+		<p class="p2">Album Name : </p><input type="text" name="albumname" class="form-control input1" placeholder="please input your album's name ">
+
+		<%= file_field_tag(:img1 ,:size=>"40") %>
+		
+
+	<% end %>
+</div>

@@ -1,0 +1,116 @@
+
+<div id="messages_index">
+	<div class="column">
+		<div class="col-md-12" id="messages_index_top">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-1" id="top_text"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;TANBI</div>
+				<div class="col-md-5 col-md-offset-1" id="top_nav">
+					<div class="row" style="margin-top: 50px;">
+						<div class="col-md-3 col-md-offset-1" style="text-align: right">
+							<a href="#">Home</a>
+						</div>
+						<div class="col-md-3" style="text-align: center;">
+							<%= link_to 'Articles', messages_article_path %>
+						</div>
+						<div class="col-md-2" style="text-align: center">
+							<%= link_to 'Pictures', pictures_index_path %>
+						</div>
+						<div class="col-md-3" style="text-align: center">
+							<div class="dropdown a2" style="float:right;">
+							   <p class="dropdown-toggle" id="dropdownMenu1"
+							      data-toggle="dropdown">
+							      <%= session[:username] %>
+							      <span class="caret"></span>&nbsp;&nbsp;
+							   <p>
+							   <ul class="dropdown-menu pull-right" role="menu" 
+							      aria-labelledby="dropdownMenu1">
+							      <li role="presentation">
+							        <%= link_to 'Personal Center',users_center_path %>
+							      </li>
+							      <li role="presentation">
+							        <%= link_to 'sign out', messages_leave_path, data: { confirm: "Are you sure？？??" } %>
+							      </li>
+							   </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12" id="messages_index_body">
+			<div class="col-md-8 col-md-offset-2" id="body_content">
+				<div id="content_title">Introduction Of TANBI&nbsp;&nbsp;</div>
+				<%= image_tag "7.jpg", class: "img-thumbnail img1" %>
+				<br/>
+				<div style="font-size:12px; font-family:Arial, Helvetica, sans-serif;float:left;margin-top: 20px; text-align: left;padding:10px;">
+                	<p style="color:#47443a;">
+                		<span style="font-weight:bold; color:#4e3222;">
+                			 &nbsp;&nbsp;&nbsp;&nbsp;Meaning is to point to aestheticism, after Taiwan, into the BL. From the expression formally tried with ACGN, so more refers to the secondary yuan men in love .
+                		</span>
+                	</p>
+                	<p> 
+                		<span style="color:#37713a; font-weight:bold;">
+                			&nbsp;&nbsp;&nbsp;&nbsp;The word was first appeared in the Japanese modern literature, as opposed to naturalism literature in another literary writing style: I tried to send. Tried to send the original intention is "opposed to expose the ugly face of humanity of naturalism, and want to find out the function beauty, enjoy the pursuit of the meaning of literature".
+                		</span>
+                	</p>
+                </div>
+                <div style="width: 80%; border-top:1px dashed rgba(0,0,0,0.3);float:left; margin-left: 50px; margin-top: 30px;"></div>
+                <div style="width: 80%; border-top:1px dashed rgba(0,0,0,0.3);float:left; margin-left: 50px; margin-top: 20px;margin-bottom: 30px;"></div>
+                <div id="content_novels">Domestic famous novels </div>
+                <div class="row" style="padding:10px;">
+                	<div class="col-md-8">
+                		<p class="noveltitle"><<2013>>(《二零一三》)</p>
+                		<p class="novelcontent">&nbsp;&nbsp;&nbsp;&nbsp;Very good zombies, is the culmination of the day night flying(非天夜翔). Similar to the science fiction film, is very rich in content, design novel, the character image is rich in full. This affection is exquisite, prose from the formality, it is very good. </p>
+                	</div>
+                	<div class="col-md-4">
+                		<%= image_tag "8.jpg", class: "img-thumbnail img2" %>
+                	</div>
+                </div>
+                <div style="width: 80%; border-top:1px dashed rgba(0,0,0,0.3);float:left; margin-left: 50px; margin-top: 20px;margin-bottom: 30px;"></div>
+                <div class="row" style="padding:10px;">
+                	<div class="col-md-8">
+                		<p class="noveltitle"> << The bayonet lamp >>(《提灯看刺刀》)</p>
+                		<p class="novelcontent">&nbsp;&nbsp;&nbsp;&nbsp;Story describes how a group of powerful modern princeling, around a mild character introversion, treats people describe happened between aloofness engineers, huai big that modern tried article style of writing is very good, so although is ZhongChangPian, but with one's feeling.  </p>
+                		<p class="novelcontent">&nbsp;&nbsp;&nbsp;&nbsp;The plot twists and turns and moving, the ups and downs, as the figure depicts the various are very plentiful, each has his strong point, interlocking, loose and tight plot in huai large sophisticated harmony, freely flowing style of writing down the sides of the especially praiseworthy huai big psychological feelings of the protagonist, plain nature very meticulous and lifelike, fascinating, let a person aftertaste for a long time.  </p>
+                	</div>
+                	<div class="col-md-4" style="margin-top: 40px;">
+                		<%= image_tag "9.gif", class: "img-thumbnail img2" %>
+                	</div>
+                </div>
+                <div style="width: 80%; border-top:1px dashed rgba(0,0,0,0.3);float:left; margin-left: 50px; margin-top: 20px;margin-bottom: 50px;"></div>
+			</div>
+		</div>
+		<div class="col-md-12" id="messages_index_bottom">
+			<div class="row" style="margin-top: 30px;">
+		        <div class="col-md-3 col-md-offset-2">
+		            <div class="footer_tit">About Us</div>
+		            <div class="footer2_1">"TANBI" is "perfect love". In this world, women do not need to hide their own gender and desires, men and women obtained the absolute in the sense of equality, have no what can't be changed, men and women are not absolute opposition, but chaos undivided unity, is the path to each other. In this world, you choose the one you love, because love absolutely, but not because he is male or female </div>
+		        </div>
+		        <div class="col-md-2">
+		           <div class="footer_tit">Site Page</div>
+		           <div class="footer_u">
+		              <ul>
+		                 <li><a href="#">Home</a></li>
+		                 <li><a href="#">About Us</a></li>
+		                 <li><a href="#">Gallery</a></li>
+		                 <li><a href="#">Contact</a></li>
+		              </ul>
+		           </div>
+		        </div>
+		        <div class="col-md-3">
+		           <div class="footer_tit">Advise site </div>
+		           <div class="footer_u">
+		              <ul>
+		                 <li><a href="http://www.jjwxc.net/">Jinjiang network literature </a></li>
+		                 <li><a href="http://www.lcread.com/book/bl.html">TANBI novel network </a></li>
+		                 <li><a href="http://www.fumanhua.cc/">TANBI cartoon network </a></li>
+		                 <li><a href="http://www.bilibili.com/">Bilibili</a></li>
+		                 <li><a href="http://baike.baidu.com/link?url=sV9YqgDw4M039fOd0omIHimo-L_lx8vMzbTu0sB8MtK4UO74okcWEmAa8AioiixOCp8i5uXZH_bXY-oCoUMWLISJdG7L8j47nI8GC8lXF_3">The baidu encyclopedia of TANBI</a></li>
+		              </ul>
+		           </div>
+		        </div>
+		     </div>
+
+		</div>
+	</div>
+</div>

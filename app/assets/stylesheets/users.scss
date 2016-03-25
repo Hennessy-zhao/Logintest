@@ -1,0 +1,398 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	
+}
+
+
+//app/views/users/login.html.erb的样式
+
+#users_login{
+	@import 'reset';
+	@import 'style';
+	p.warning{
+		color:red;
+		font-size:1em;
+	}
+
+	p.link1{
+			margin-top:20px;
+			font-size: 1.4em;
+			text-align: right;
+
+
+			a:link{
+				color: white;
+				text-decoration: none;
+			}
+
+			a:visited{
+				text-decoration:none; 
+				color:white;
+			}
+
+			a:hover{
+				text-decoration:underline; 
+				color:orange;
+			}
+
+			a:active{
+				text-decoration:none; 
+				color:white;
+			}
+		}
+}
+
+
+//app/views/users/register.html.erb的样式
+
+#users_register{
+	@import 'reset';
+	@import 'style';
+
+	p.warning{
+		color:red;
+		font-size:1em;
+	}
+
+	p.link1{
+			margin-top:20px;
+			font-size: 1.4em;
+			text-align: right;
+
+
+			a:link{
+				color: white;
+				text-decoration: none;
+			}
+
+			a:visited{
+				text-decoration:none; 
+				color:white;
+			}
+
+			a:hover{
+				text-decoration:underline; 
+				color:orange;
+			}
+
+			a:active{
+				text-decoration:none; 
+				color:white;
+			}
+		}
+	
+}
+
+
+
+//app/views/users/center.html.erb的样式
+
+#users_center{
+
+	#left{
+		height:620px;
+		background-color:rgb(31,33,36);
+		padding:0px;
+
+		#title{
+			color:white;
+			font-size:1.2em;
+			margin:10px;
+		}
+
+		#img1{
+			margin-top:20px;
+			height:180px;
+			background-image:url(10.jpg);
+			background-size:cover;
+			background-repeat:no-repeat;
+		}
+
+		#host{
+			margin-top:20px;
+			color: white;
+			font-family: 'Times New Roman', Times, serif;
+			font-weight: bold;
+			font-size: 1.3em;
+		}
+
+		#link1{
+			margin-top:30px;
+			font-size: 1em;
+			color:white;
+
+			p.p1{
+				margin-top:20px;
+				margin-bottom:20px;
+				margin-left:50px;
+				float:left;
+			}
+
+			a:link{
+				color: white;
+				text-decoration: none;
+				}
+
+			a:visited{
+				text-decoration:none; 
+				color:white;
+				}
+
+			a:hover{
+				text-decoration:underline; 
+				color:orange;
+			}
+
+			a:active{
+				text-decoration:none; 
+				color:white;
+			}
+		}
+	}
+
+	#right{
+		height:620px;
+		background-color:white;
+		padding:0px;
+
+		#top{
+			height:80px;
+
+			p.p1{
+				margin-top:25px;
+				font-size:1.3em;
+				float:left;
+			}
+
+			a.a1{
+				margin-left:40px;
+				margin-right:40px;
+			}
+
+			a:link{
+				color: #7f7f7f;
+				text-decoration: none;
+				}
+
+			a:visited{
+				text-decoration:none; 
+				color:#7f7f7f;
+				}
+
+			a:hover{
+				text-decoration:underline; 
+				color:orange;
+			}
+
+			a:active{
+				text-decoration:none; 
+				color:#7f7f7f;
+			}
+		}
+
+		#body{
+			height:520px;
+			background-color:rgb(239,239,239);
+			padding:0px;
+		}
+	}
+
+}
+
+//app/views/users/personal.html.erb的样式
+
+#users_personal{
+	background-color:rgb(239,239,239);
+	height:518px;
+
+	#num{
+		width:300px;
+		height:200px;
+		background-color:white;
+		float:left;
+		margin-left:50px;
+		margin-top:50px;
+		border:1px solid rgba(0,0,0,0.1);
+		border-radius:12px;
+		box-shadow: 3px 3px 7px 3px rgba(0,0,0,0.3);
+
+		p.p1{
+			margin-top:20px;
+			padding-bottom:10px;
+			color: #47443a;
+			font-family: 'Times New Roman', Times, serif;
+			font-weight: bold;
+			font-size: 1.5em;
+			border-bottom:1px solid rgba(0,0,0,0.1);
+		}
+
+		p.p2{
+			margin-top:30px;
+			color:orange;
+			font-size:2em;
+		}
+	}
+}
+
+
+//app/views/users/personalmessage.html.erb的样式
+
+#users_personalmessage{
+	background-color:rgb(239,239,239);
+	min-height:520px;
+
+	#top{
+		width:95%;
+		margin-left:20px;
+
+		p.p1{
+			padding-bottom:10px;
+			color: #47443a;
+			font-family: 'Times New Roman', Times, serif;
+			font-weight: bold;
+			font-size: 1.3em;
+			border-bottom:1px solid rgba(0,0,0,0.1);
+		}
+
+		#title1{
+			width:200px;
+			float:left;
+			white-space:nowrap; 
+			text-overflow:ellipsis; 
+			-o-text-overflow:ellipsis; 
+			overflow: hidden;
+		}
+
+		#content1{
+			width:500px;
+			float:left;
+			white-space:nowrap; 
+			text-overflow:ellipsis; 
+			-o-text-overflow:ellipsis; 
+			overflow: hidden;
+		}
+
+		#action1{
+			width:150px;
+			float:left;
+		}
+	}
+
+	#body{
+		width:95%;
+		margin-left:20px;
+		padding:0px;
+		border-bottom:1px dashed rgba(0,0,0,0.2);
+		font-size:1em;
+		font-family: 'Times New Roman', Times, serif;
+		font-weight: bold;
+
+		#title2{
+			padding-left:30px;
+			width:200px;
+			padding-top:10px;
+			padding-bottom:10px;
+			float:left;
+			white-space:nowrap; 
+			text-overflow:ellipsis; 
+			-o-text-overflow:ellipsis; 
+			overflow: hidden;
+			text-align:left;
+		}
+
+		#content2{
+			padding-left:30px;
+			width:500px;
+			padding-top:10px;
+			padding-bottom:10px;
+			float:left;
+			white-space:nowrap; 
+			text-overflow:ellipsis; 
+			-o-text-overflow:ellipsis; 
+			overflow: hidden;
+			text-align:left;
+		}
+
+		#action2{
+			padding-left:30px;
+			width:150px;
+			float:left;
+			padding-top:10px;
+			padding-bottom:10px;
+			text-align:left;
+		}
+	}
+	
+}
+
+
+//app/views/users/personalcomment.html.erb的样式
+
+#users_personalcomment{
+	background-color:rgb(239,239,239);
+	min-height:520px;
+
+	#top{
+		width:95%;
+		margin-left:50px;
+
+		p.p1{
+			padding-bottom:10px;
+			color: #47443a;
+			font-family: 'Times New Roman', Times, serif;
+			font-weight: bold;
+			font-size: 1.3em;
+			border-bottom:1px solid rgba(0,0,0,0.1);
+		}
+
+		
+		#content1{
+			width:550px;
+			float:left;
+			white-space:nowrap; 
+			text-overflow:ellipsis; 
+			-o-text-overflow:ellipsis; 
+			overflow: hidden;
+		}
+
+		#action1{
+			width:150px;
+			float:left;
+		}
+	}
+
+	#body{
+		width:80%;
+		margin-left:60px;
+		padding:0px;
+		border-bottom:1px dashed rgba(0,0,0,0.2);
+		font-size:1em;
+		font-family: 'Times New Roman', Times, serif;
+		font-weight: bold;
+
+		#content2{
+			padding-left:30px;
+			width:550px;
+			padding-top:10px;
+			padding-bottom:10px;
+			float:left;
+			white-space:nowrap; 
+			text-overflow:ellipsis; 
+			-o-text-overflow:ellipsis; 
+			overflow: hidden;
+			text-align:left;
+		}
+
+		#action2{
+			padding-left:30px;
+			width:150px;
+			float:left;
+			padding-top:10px;
+			padding-bottom:10px;
+			text-align:left;
+		}
+	}
+}

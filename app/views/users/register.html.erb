@@ -1,0 +1,14 @@
+
+<div id="users_register">
+		<div class="page-container">
+		    <h1><font color="white">Sign up(注册)</font></h1>
+		    <%= form_tag("/users/do_register", method: "post") do |f|  %>
+		    	<p class="warning"><%= @warning %></p>
+		    	<input type="text" name="username" class="username" placeholder="Please input your username！">
+		    	<input type="password" name="userpassword" class="password" placeholder="Please input your password！">
+		    	<input type="password" name="repeatpassword" placeholder="Please input your password again!" class="password">
+		    	<button type="submit" class="submit_button">Sign up</button>
+		    <% end %>
+		    <p class="link1"><%= link_to"Login", users_login_path %></p>
+		</div>
+	</div>

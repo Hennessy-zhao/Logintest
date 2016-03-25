@@ -1,0 +1,121 @@
+
+<div id="messages_article">
+	<div class="column">
+		<div class="col-md-12" id="messages_article_top">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-1" id="top_text"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;TANBI</div>
+				<div class="col-md-5 col-md-offset-1" id="top_nav">
+					<div class="row" style="margin-top: 50px;">
+						<div class="col-md-3 col-md-offset-1" style="text-align: right">
+							<%= link_to 'Home', messages_index_path %>
+						</div>
+						<div class="col-md-3" style="text-align: center;">
+							<%= link_to 'Articles', messages_article_path %>
+						</div>
+						<div class="col-md-2" style="text-align: center">
+							<%= link_to 'Pictures', pictures_index_path %>
+						</div>
+						<div class="col-md-3" style="text-align: center">
+							<div class="dropdown a2" style="float:right;">
+							   <p class="dropdown-toggle" id="dropdownMenu1"
+							      data-toggle="dropdown">
+							      <%= session[:username] %>
+							      <span class="caret"></span>&nbsp;&nbsp;
+							   <p>
+							   <ul class="dropdown-menu pull-right" role="menu" 
+							      aria-labelledby="dropdownMenu1">
+							      <li role="presentation">
+							        <%= link_to 'Personal Center',users_center_path %>
+							      </li>
+							      <li role="presentation">
+							        <%= link_to 'sign out', messages_leave_path, data: { confirm: "Are you sure？？??" } %>
+							      </li>
+							   </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12" id="messages_article_body">
+			<div class="col-md-8 col-md-offset-2" id="body_content">
+				<div id="content_title">Articles About TANBI</div>
+				<div style="width: 80%; border-top:1px dashed rgba(0,0,0,0.3);float:left; margin-left: 50px; margin-top: 50px;margin-bottom: 50px;"></div>
+				<table class="tab1" style="table-layout: fixed;">
+			  	 <thead>
+			     	 <tr>
+			        	<th colspan="2"><center>Title</center></th>
+			         	<th colspan="3"><center>Main Message</center></th>
+			         	<th colspan="2"><center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action</center></th>
+			      	</tr>
+			   	</thead>
+			   	<p style="color:red;float:left;font-size:1em;margin-left: 50px;"><%= @warning %></p>
+			  	<% @msg.each do |message| %>
+				  	<tbody>
+				      	<tr>
+				         	<td colspan="2"><div id="table_hidden">&nbsp;&nbsp;&nbsp;<%= message.title %></div></td>
+				         	<td colspan="3"><div id="table_hidden">&nbsp;&nbsp;&nbsp;<%= message.message %></div></td>
+				         	<td colspan="2">
+				         		<span style="float:right">
+				         		<%= link_to'look', show_message_path(message.id), class: "btn btn-default btn-xs" %>
+				         			&nbsp;&nbsp;&nbsp;
+								<%= link_to'delete', destroy_message_path(message.id), data: { confirm: "Are you sure??" }, class: "btn btn-default btn-xs" %>
+								&nbsp;&nbsp;&nbsp;
+								</span>
+							</td>
+				      	</tr>
+				   	</tbody>
+				<% end %>
+			</table>
+			<br/><br/><br/>
+			<center>
+				<%= will_paginate @msg, class: "page" %>
+			</center>
+				<br/><br/>
+				<h4>New Message</h4>
+				<%= form_tag("/messages/do_message", method: "post") do |f|  %>
+					<p>
+						<center><input type="text" name="title" placeholder="Title" class="form-control" style="width:80%;margin: 15px;"></center>
+					</p>
+					<p>
+						<center><textarea name="message" placeholder="Message" class="form-control" rows="4" style="width:80%;margin: 15px;"></textarea></center>
+					</p>
+					<p>
+					    <center><input type="submit" value="submit" class="btn btn-success btn1" style="width:60%;"></center>
+					</p>
+				<% end %>
+			</div>
+		</div>
+		<div class="col-md-12" id="messages_article_bottom">
+			<div class="row" style="margin-top: 30px;">
+		        <div class="col-md-3 col-md-offset-2">
+		            <div class="footer_tit">About Us</div>
+		            <div class="footer2_1">"TANBI" is "perfect love". In this world, women do not need to hide their own gender and desires, men and women obtained the absolute in the sense of equality, have no what can't be changed, men and women are not absolute opposition, but chaos undivided unity, is the path to each other. In this world, you choose the one you love, because love absolutely, but not because he is male or female </div>
+		        </div>
+		        <div class="col-md-2">
+		           <div class="footer_tit">Site Page</div>
+		           <div class="footer_u">
+		              <ul>
+		                 <li><a href="#">Home</a></li>
+		                 <li><a href="#">About Us</a></li>
+		                 <li><a href="#">Gallery</a></li>
+		                 <li><a href="#">Contact</a></li>
+		              </ul>
+		           </div>
+		        </div>
+		        <div class="col-md-3">
+		           <div class="footer_tit">Advise site </div>
+		           <div class="footer_u">
+		              <ul>
+		                 <li><a href="http://www.jjwxc.net/">Jinjiang network literature </a></li>
+		                 <li><a href="http://www.lcread.com/book/bl.html">TANBI novel network </a></li>
+		                 <li><a href="http://www.fumanhua.cc/">TANBI cartoon network </a></li>
+		                 <li><a href="http://www.bilibili.com/">Bilibili</a></li>
+		                 <li><a href="http://baike.baidu.com/link?url=sV9YqgDw4M039fOd0omIHimo-L_lx8vMzbTu0sB8MtK4UO74okcWEmAa8AioiixOCp8i5uXZH_bXY-oCoUMWLISJdG7L8j47nI8GC8lXF_3">The baidu encyclopedia of TANBI</a></li>
+		              </ul>
+		           </div>
+		        </div>
+		     </div>
+		</div>
+	</div>
+</div>

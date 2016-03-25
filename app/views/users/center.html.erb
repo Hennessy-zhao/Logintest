@@ -1,0 +1,82 @@
+<div id="users_center">
+	<div class="row">
+		<div class="col-md-3" id="left">
+			<div class="column">
+				<div class="col-md-12" id="title">
+					PERSONAL&nbsp;&nbsp;CENTER 	 	
+				</div>
+				<div class="col-md-12" id="img1"></div>
+				<div class="col-md-12" id="host"><%= session[:username] %></div>
+				<div class="col-md-12" id="link1">
+					<p class="p1"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<%= link_to 'PERSONAL INFORMATION', users_personal_path, target: "iframe1", class: "a1" %></p>
+					<p class="p1"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;<%= link_to 'MY MESSAGES', users_personalmessage_path, target: "iframe1", class: "a1" %></p>
+					<p class="p1"><span class="glyphicon glyphicon-th-list"></span>&nbsp;&nbsp;<%= link_to 'MY COMMENTS', users_personalcomment_path, target: "iframe1", class: "a1"  %></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-9" id="right">
+			<div class="column">
+				<div class="col-md-12" id="top">
+					<p class="p1">
+						&nbsp;&nbsp;&nbsp;&nbsp;|
+						<%= link_to 'HOME', messages_index_path,class: "a1" %>|
+						<%= link_to 'ARTICLES', messages_article_path, class: "a1" %>|
+						<%= link_to 'PICTURES', pictures_index_path, class: "a1" %>|
+						<%= link_to 'SIGN OUT', users_login_path, class: "a1" %>|
+					</p>
+				</div>
+				<div class="col-md-12" id="body">
+					<br/>
+					<iframe src ="/users/personal" name="iframe1" frameborder="0" marginwidth="0" width="100%" height="100%" scrolling="yes">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--div class="row">
+		<div class="col-md-12" id="users_personal_top">
+			<div class="dropdown" style="float:right;">
+			   	<button type="button" class="btn dropdown-toggle" id="dropdownMenu1"
+			      data-toggle="dropdown">User: <%= session[:username] %>
+			      	<span class="caret"></span>
+			   	</button>
+			  	<ul class="dropdown-menu pull-right" role="menu" 
+			      aria-labelledby="dropdownMenu1">
+			     	<li role="presentation">
+			         	<a role="menuitem" tabindex="-1" href="#">Personal center</a>
+			      	</li>
+			      	<li role="presentation">
+			         	<%= link_to 'sign out', messages_leave_path, data: { confirm: "Are you sure？？??" } %>
+			      	</li>
+			   	</ul>
+			</div>
+			<br/>
+			<center><h3>This is <%= session[:username] %>'s Personal Center</h3></center>
+			<p>
+				>><%= link_to 'Messages', messages_index_path %>
+			</p>
+		</div>
+		<div class="col-md-12" id="users_personal_body">
+			<div class="row">
+				<div class="col-md-3" id="users_personal_body_left">
+					<div class="column">
+						<div class="col-md-12" id="users_personal_body_left_title">
+							<%= link_to 'Personal Information', users_personal_path, target: "iframe1" %>
+						</div>
+						<div class="col-md-12" id="users_personal_body_left_title">
+							<%= link_to 'My Messages', users_personalmessage_path, target: "iframe1" %>
+						</div>
+						<div class="col-md-12" id="users_personal_body_left_title">
+							<%= link_to 'My Comments', users_personalcomment_path, target: "iframe1" %>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-9" id="users_personal_body_right">
+					<iframe src ="/users/personal" name="iframe1" frameborder="0" marginwidth="0" width="100%" height="100%" scrolling="yes">
+				</div>
+			</div>
+		</div>
+	</div-->

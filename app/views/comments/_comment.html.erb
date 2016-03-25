@@ -1,0 +1,28 @@
+<div id="comments_comment">
+	<div id="commenter">
+		<span style="float:left;">
+				Commenter: <%= comment.commenter %>
+		</span>
+		<span style="float:right;">
+			<%= link_to'Delete', destroy_comment_path(comment.id), data: { confirm: "Are you sure??" }, class: "btn btn-default btn-xs btn2" %>
+		</span>
+	</div>
+	<div id="comments">
+		<%= comment.comment_message %>
+	</div>
+</div>
+
+
+
+<!--b>Commenter: <%= comment.commenter %></b>
+			<span style="float:right;">
+				<%= link_to'Delete', destroy_comment_path(comment.id), data: { confirm: "Are you sure??" }, class: "btn btn-default btn-xs btn2" %>
+			</span>
+			<br/>
+			<div class="row">
+				<div class="col-md-2"><b>Comment:</b></div>
+				<div class="col-md-10">
+					<%= comment.comment_message %>
+				</div>
+			</div>
+			<div style="width:100%;border-bottom:1px dashed white;margin-top: 20px;margin-bottom: 20px;"></div-->

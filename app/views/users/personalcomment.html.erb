@@ -1,0 +1,46 @@
+<div id="users_personalcomment">
+	<div class="row" id="top">
+		<div id="content1">
+			<p class="p1">Comments</p>
+		</div>
+		<div id="action1">
+			<p class="p1">Action</p>
+		</div>
+	</div>
+	<% @percomt.each do |comment| %>
+		<div class="row" id="body">
+			<div id="content2">
+			    <%= comment.comment_message %>
+			</div>
+			<div id="action2">
+				<%= link_to'look', show_message_path(comment.message_id), class: "btn btn-default btn-xs",target: "_blank" %>
+					&nbsp;&nbsp;&nbsp;
+				<%= link_to'Delete', commentdestroy_user_path(comment.id), data: { confirm: "Are you sure??" }, class: "btn btn-default btn-xs btn2" %>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+
+
+
+<!--table class="table table-hover" style="table-layout: fixed;">
+		<thead>
+			<tr>
+				<th colspan="5">comments</th>
+				<th colspan="2">Action</th>
+			</tr>
+		</thead>
+		<% @percomt.each do |comment| %>
+		<tbody>
+			<tr>
+				<td colspan="5"><div id="table_hidden"><%= comment.comment_message %></div></td>
+				<td colspan="2">
+					<%= link_to'look', show_message_path(comment.message_id), class: "btn btn-success btn-xs",target: "_blank" %>
+					&nbsp;&nbsp;&nbsp;
+					<%= link_to'Delete', commentdestroy_user_path(comment.id), data: { confirm: "Are you sure??" }, class: "btn btn-success btn-xs btn2" %>
+				</td>
+			</tr>
+		</tbody>
+		<% end %>
+	</table-->

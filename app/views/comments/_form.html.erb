@@ -1,0 +1,16 @@
+<div id="comments_form">
+	<p class="p1">New Comment</p>
+	<%= form_tag("/comments/do_comment/#{message.id}", method: "post") do |f|  %>
+		<p class="p2">
+			Commenter : <%= session[:username] %>
+		</p>
+		<p>
+			<center><textarea name="comment_message" placeholder="Comment" class="form-control" rows="4" style="width:85%;"></textarea></center>
+		</p>
+		<br/>
+		<p>
+			<center><input type="submit" name="submit" value="submit" class="btn btn-success" style="width:40%;"></center> 
+		</p>
+
+	<% end %>
+</div>
