@@ -2,12 +2,17 @@ class MessagesController < ApplicationController
 
 
 	def index
-			
+		if session[:username] == nil then
+			redirect_to(:controller => 'users', :action => 'login')		
+		end	
 		#message.comments=Message.comment.paginate(page:params[:page],per_page:20)
 	end
 
 	#show all messages
 	def article
+		if session[:username] == nil then
+			redirect_to(:controller => 'users', :action => 'login')		
+		end
 		@msg = Message.paginate(page:params[:page],per_page:20)	
 	end
 
@@ -17,7 +22,7 @@ class MessagesController < ApplicationController
   	#if exists, there is an error prompt, 
   	#if not exists,create a new message,
   	#and jump to the refresh the current page 
-	def do_message
+	def domessage
 		title = params[:title]
 	    message = params[:message]
 	    if title == '' && message == '' then
@@ -44,6 +49,9 @@ class MessagesController < ApplicationController
 	#show a message and it's comments
 
 	def show
+		if session[:username] == nil then
+			redirect_to(:controller => 'users', :action => 'login')		
+		end
 		@message = Message.find(params[:id])
 		@comments = @message.comments.all
 	end

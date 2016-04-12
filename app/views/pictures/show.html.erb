@@ -1,0 +1,52 @@
+<div id="pictures_show">
+	<p class="p1"><%= @album.albumname %></p>
+	<p class="p2">
+		&nbsp;&nbsp;<span style="font-size: 1.3em;">Description:</span>&nbsp;&nbsp;&nbsp;&nbsp;<%= @album.description %>
+	</p>
+	<div style="width: 90%;border-top: 3px solid rgba(0,0,0,0.2);margin-left: 20px;margin-top: 20px;margin-bottom: 20px;"></div>
+
+		<!-- 按钮触发模态框 -->
+		<div style="display: none;">
+			<button class="btn btn-primary btn-lg" data-toggle="modal" 
+			   data-target="#myModal" id="modelbutton">
+			   开始演示模态框
+			</button>
+		</div>
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+		   aria-labelledby="myModalLabel" aria-hidden="true">
+		   <div class="modal-dialog">
+		      <div class="modal-content">
+		         <div class="modal-body" id="modalbody">
+		            <button type="button" class="close" 
+		               data-dismiss="modal" aria-hidden="true">
+		                  &times;
+		            </button>
+		            <div id="modalpic"></div>
+		         </div>
+		         
+		      </div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+
+	<!-- 模态框（Modal） -->
+	<div style="text-align: left;margin-left: 20px;"><%= link_to'Slide', slidepic_pictures_path(@album.id), class: "btn btn-default", target: "_blank" %></div>
+	<br/>
+	<% @pictures.each do |picture| %>
+		<img src="/albums/<%= @album.albumname %>/<%= picture.img %>" id="img1" class="img-thumbnail">
+	<% end %>
+
+
+</div>
+
+
+<script type="text/javascript">
+	$("img[id='img1']").each(function(index){
+		$(this).click(function(){
+			$imgsrc=$(this)[0].src;
+			$("#modelbutton").trigger('click');
+			$("#modalpic").empty();
+			$("#modalpic").append("<img width='100%'' height='100%' src='"+$imgsrc+"'>");
+		})
+	})
+</script>

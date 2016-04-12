@@ -1,3 +1,38 @@
 <div id="pictures_picture">
-	pictures
+	<p class="p1">>>Here are all the albums</p>
+	<div id="show">
+		<% @album.each do |album| %>
+			<div id="content">
+				<div id="album">
+					<%= image_tag "7.jpg",id: "albumpic",class: "img-rounded" %>
+					<div id="titlename">
+						<%= album.albumname %>
+					</div>
+					<div id="description">
+						<p style="text-align: left;">&nbsp;&nbsp;Host:&nbsp;&nbsp;<%= album.albumhost %></p>
+						<p style="text-align: left;">&nbsp;&nbsp;Description:</p>
+						<p style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= album.description %></p>
+					</div>
+				</div>
+				<%= link_to'look', show_pictures_path(album.id), class: "btn btn-success" %>
+			</div>
+		<% end %>
+	</div>
+
 </div>
+
+
+<script type="text/javascript">
+	$(function(){
+		$("div[id='album']").each(function(index){
+			$(this).mouseenter(function(){
+				$(this).children("#description").animate({top:"-150px"});
+			})
+
+			$(this).mouseleave(function(){
+				$(this).children("#description").animate({top:"20px"});
+			})
+		})
+		
+ 	})
+</script>r

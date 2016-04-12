@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
 #user模型
-  post '/users/do_login' => 'users#do_login'
+  post '/users/dologin' => 'users#dologin'
   get  '/users/show' => 'users#show'
   get  '/users/login' => '/'
   get  '/users/register' => 'users#register'
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 #message模型
   get  '/messages/index' => 'messages#index'
   get  '/messages/article' => 'messages#article'
-  post '/messages/do_message' => 'messages#do_message'
+  post '/messages/domessage' => 'messages#domessage'
   get  '/messages/leave' => 'messages#leave'
   get  '/show/messages/:id' => 'messages#show', as: :show_message
   get  '/destroy/messages/:id' => 'messages#destroy', as: :destroy_message
@@ -36,6 +36,11 @@ Rails.application.routes.draw do
   get  '/pictures/index' => 'pictures#index'
   get  '/pictures/picture' => 'pictures#picture'
   get  '/pictures/new' => 'pictures#new'
+  get  '/pictures/album' => 'pictures#album'
+  post '/pictures/newalbum' => 'pictures#newalbum'
+  post '/pictures/newpic' => 'pictures#newpic'
+  get  '/show/pictures/:id' => 'pictures#show', as: :show_pictures
+  get  '/slidepic/pictures/:id' => 'pictures#slidepic', as: :slidepic_pictures
 
 
   root 'users#login'

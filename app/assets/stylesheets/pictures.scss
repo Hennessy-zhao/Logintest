@@ -211,6 +211,116 @@
 	width:100%;
 	min-height:1350px;
 	background-color:rgb(253,250,244);
+
+	p.p1{
+		font-size:1.3em;
+		float:left;
+		font-family: Arial, Helvetica, sans-serif;
+		margin-top:20px;
+		margin-left:20px;
+	}
+
+	#show{
+		width:99%;
+		height:auto;
+		float:left;
+	}
+
+	#content{
+		width:230px;
+		height:300px;
+		float:left;
+		margin-left:20px;
+		margin-top:20px;
+		overflow:hidden;
+	}
+
+	#album{
+		width:230px;
+		height:250px;
+		border:1px solid rgba(0,0,0,0.1);
+		float:left;
+		background-color:rgb(247,247,247);
+		overflow:hidden;
+		margin-bottom:10px;
+	}
+
+	#albumpic{
+		width:200px;
+		height:150px;
+		margin:12px;
+		border-top:1px solid rgba(0,0,0,0.08);
+		border-right:1px solid rgba(0,0,0,0.08);
+		border-left:1px solid rgba(0,0,0,0.05);
+		border-bottom:1px solid rgba(0,0,0,0.05);
+	}
+
+	#titlename{
+		width:200px;
+		margin-left:10px;
+		margin-top:10px;
+		padding-top:10px;
+		height:auto;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:1em;
+		font-weight:bolder;
+		border-top:2px dashed rgba(0,0,0,0.11);
+		color:rgba(0,0,0,0.8)
+	}
+
+	#description{
+		width:100%;
+		height:180px;
+		background-color:rgba(255,255,255,0.8);
+		position:relative;
+		top:20px;
+		left:0px;
+		padding:10px;
+		font-size:1em;
+		font-family: Arial, Helvetica, sans-serif;
+		color:rgba(0,0,0,0.8);
+		border-top:1px solid rgba(0,0,0,0.08);
+		text-overflow:ellipsis; 
+        -o-text-overflow:ellipsis; 
+		overflow: hidden;
+	}
+}
+
+
+
+//app/views/pictures/album.html.erb的样式
+
+#pictures_album{
+	width:100%;
+	min-height:1350px;
+	background-color:rgb(253,250,244);
+
+	p.p1{
+		padding-top:30px;
+		font-size:1.3em;
+		color:green;
+		font-family: Arial, Helvetica, sans-serif;
+		text-decoration:underline;
+		cursor:pointer;
+	}
+
+
+	p.notice{
+		color:blue;
+		font-size:1.3em;
+		float:left;
+		margin-left:50px;
+		margin-top:20px;
+	}
+
+
+	p.warning{
+		color:red;
+		font-size:1.2em;
+		float:left;
+		margin-left:50px;
+		margin-top:20px;
+	}
 }
 
 
@@ -222,28 +332,138 @@
 	min-height:1350px;
 	background-color:rgb(253,250,244);
 
+	p.albumtitle{
+		padding-top:20px;
+		font-size:1.8em;
+		font-family: Arial, Helvetica, sans-serif;
+
+	}
+
 	p.p1{
-		text-align:left;
+		float:left;
 		font-size: 1.1em;
 		font-weight:bold;
 		font-family: Arial, Helvetica, sans-serif;
-		color: rgba(0,0,0,0.8);
-		padding:20px;
+		color: rgba(0,0,0,0.6);
+		margin-bottom:20px;
 	}
 
 	p.p2{
-		text-align:center;
-		font-size: 1.2em;
+		float:left;
+		font-size: 1.1em;
 		font-weight:bold;
 		font-family: Arial, Helvetica, sans-serif;
-		color: black;
-		margin-left:100px;
-		margin-right:10px;
+		color: rgba(0,0,0,0.6);
+		margin-top:10px;
+	}
+
+	
+
+
+	#preview{
+      width:260px;
+      height:190px;
+      overflow:hidden;
+      margin-top:50px;
+      margin-bottom:40px;
+    }
+
+    #imghead {
+      filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+    }
+
+	#showpic{
+		width:99%;
+		margin-top:70px;
+	}
+
+	#img1{
+		width:150px;
+		height:150px;
+		margin:10px;
+	}
+
+
+}
+
+
+
+
+//app/views/pictures/show.html.erb的样式
+
+#pictures_show{
+	width:100%;
+	min-height:1350px;
+	background-color:rgb(253,250,244);
+
+
+	p.p1{
+		font-size:2em;
+		font-weight:bold;
+		padding-top:20px;
+		margin-left:40px;
+		text-align:left;
+	}
+
+
+	p.p2{
+		font-size:1.1em;
+		font-weight:bold;
+		margin-left:20px;
+		margin-right:20px;
+		text-align:left;
+	}
+
+	#img1{
+		width:170px;
+		height:170px;
+		margin:10px;
 		float:left;
 	}
 
-	input.input1{
-		float:left;
-		width:40%;
-	}
+}
+
+
+//app/views/pictures/slidepic.html.erb的样式
+
+#pictures_slidepic{
+	width:100%;
+	min-height:1350px;
+	background-color:rgb(253,250,244);
+
+	h1, h2, h3, h4, h5, h6{font-size:12px;font-weight:normal}
+	div{text-align:left}
+	a img{border:0}
+	body{color:#333; text-align:center; font:12px "宋体";background:#000;}
+	ul, ol, li{list-style-type:none;vertical-align:0}
+	a{outline-style:none;color:#535353;text-decoration:none}
+	a:hover{color:#D40000; text-decoration:none}
+
+	/* 效果CSS开始 */
+	.mod18{width:100%;position:relative;margin:0 auto;}
+	.mod18 .btn{position:absolute;cursor:pointer;z-index:99;font-size:50px;font-weight:bold;}
+	.mod18 .prev{left:10px;background:url(prevBtn.png) no-repeat;}
+	.mod18 #prevTop,.mod18 #nextTop{top:250px;width:32px;height:48px;}
+	.mod18 #prev,.mod18 #next{top:490px;width:10px;height:16px;}
+	.mod18 #prevTop{background:url(prevBtnTop.png) 0 0 no-repeat;}
+	.mod18 #nextTop{background:url(nextBtnTop.png) 0 0 no-repeat;}
+	.mod18 .next{right:10px;background:url(nextBtn.png) no-repeat;}
+	.mod18 li{float:left !important;}
+	.mod18 .cf li{position:relative;color:#fff;}
+	.mod18 .cf a{display:block;width:1200px;height:500px;position:absolute;color:#fff;}
+	.mod18 .cf li span{display:block;width:1200px;position:absolute;left:75px;bottom:0;padding:10px 20px;line-height:22px;text-align:left;background:rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = "#60000000",endColorstr = "#60000000");}
+	.mod18 .picBox{width:1200px; height:500px; padding-left:75px; padding-right:76px;position:relative;overflow:hidden; background:#0D0D0D; padding-top:40px;}
+	.mod18 .picBox ul{height:500px;position:absolute; left:0;}
+	.mod18 .picBox li{padding-left:75px; padding-right:1px; width:1200px;height:500px;}
+	.mod18 .listBox{width:1000px;height:150px;margin:0 auto;position:relative; padding-top:15px;overflow:hidden;}
+	.mod18 .listBox ul{height:150px;position:absolute; padding-left:12px;}
+	/*.mod18 .listBox li{width:1000px;height:150px;cursor:pointer;position:relative; padding:5px 0 0 0;}*/
+	.mod18 .listBox li i{display:none;}
+	.mod18 .listBox li a{display:block;width:1000px;height:150px;}
+	.mod18 .listBox img{border:3px solid #fff;}
+	.mod18 .listBox .on img{border:3px solid #CECDCC;}
+	.mod18 .listBox .on{background:url(img_bg.jpg) center top no-repeat;}
+	.mod18 .listBox .on i{display:block;}
+	
+	
 }

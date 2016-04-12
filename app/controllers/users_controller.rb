@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   #determine whether a user name and password match, 
   #if not match, there is an error prompt, 
   #if match, jump to the page:messages/index.html.erb
-  def do_login
+  def dologin
       username = params[:username]
       userpassword = params[:userpassword]
       if User.find_by_username(username) then
@@ -70,6 +70,9 @@ class UsersController < ApplicationController
 
   # the personal center page
   def center
+    if session[:username] == nil then
+      redirect_to(:controller => 'users', :action => 'login')   
+    end
   end
 
   # the personal information page

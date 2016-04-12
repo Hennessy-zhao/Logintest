@@ -1,7 +1,7 @@
 	<div id="users_login">
 		<div class="page-container">
 		    <h1><font color="white">Login(登录)</font></h1>
-		    <%= form_tag("/users/do_login", method: "post") do |f|  %>
+		    <%= form_tag("/users/dologin", method: "post") do |f|  %>
 		    	<p class="warning"><%= @warning %></p>
 		    	<input type="text" name="username" class="username" placeholder="Please input your username！">
 		    	<input type="password" name="userpassword" class="password" placeholder="Please input your password！">
